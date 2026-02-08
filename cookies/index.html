@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070a12">
+
+  <title>cookies · ka</title>
+  <meta name="description" content="politica de cookies do ka.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://example.com/cookies/">
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">pular para o conteudo</a>
+
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="/" aria-label="voltar para o inicio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l8.6 4.9v10.2L12 22l-8.6-4.9V6.9L12 2zm0 2.2L5.4 7.6v8.8L12 19.8l6.6-3.4V7.6L12 4.2z"/>
+          </svg>
+        </span>
+        <span>ka blog</span>
+      </a>
+
+      <div class="header__right">
+        <a class="pill" href="/privacy/" aria-label="politica de privacidade">
+          <span class="pill__dot" aria-hidden="true"></span>
+          privacidade
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" class="main page">
+    <div class="card">
+      <div class="card__inner">
+        <p class="kicker">ultima atualizacao: <span id="data-atualizacao"></span></p>
+        <h1>politica de cookies</h1>
+
+        <p>por padrao eu tento nao usar nada alem do essencial.</p>
+
+        <h2 class="card__hint">o que existe aqui</h2>
+        <ul>
+          <li><strong>consentimento (essencial)</strong>: salvo sua escolha no seu navegador. isso evita o banner aparecer toda hora.</li>
+          <li><strong>analytics (opcional)</strong>: so carrega se voce permitir. no projeto vem como um stub (arquivo local) pra voce plugar ga4, plausible, etc.</li>
+        </ul>
+
+        <h2 class="card__hint">como eu salvo sua escolha</h2>
+        <p>
+          uso <strong>localStorage</strong> e um <strong>cookie</strong> chamado <code>ka_consent</code> com prazo de 180 dias.
+          se voce rejeitar analytics, isso fica registrado do mesmo jeito (sua escolha).
+        </p>
+
+        <h2 class="card__hint">como mudar depois</h2>
+        <p>
+          clica em <a href="#" id="abrir-preferencias-inline">preferencias</a> no rodape, ou limpa cookies/local storage do navegador.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="ano"></span> ka</span>
+    <span>
+      <a href="/cookies/">cookies</a>
+      ·
+      <a href="/privacy/">privacidade</a>
+      ·
+      <a href="#" id="abrir-preferencias">preferencias</a>
+    </span>
+  </footer>
+
+  <section class="cookie" id="cookie" hidden aria-label="banner de cookies">
+    <div class="cookie__inner">
+      <div class="cookie__text">
+        <p class="cookie__title">cookies e privacidade</p>
+        <p class="cookie__p">
+          uso apenas o essencial pra lembrar sua escolha. analytics so carrega se voce permitir.
+          <a href="/cookies/">ver detalhes</a>.
+        </p>
+      </div>
+      <div class="cookie__actions">
+        <button class="cbtn" id="cookie-rejeitar" type="button">rejeitar</button>
+        <button class="cbtn" id="cookie-preferencias" type="button">preferencias</button>
+        <button class="cbtn cbtn--primary" id="cookie-aceitar" type="button">aceitar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal" aria-hidden="true" aria-label="preferencias de privacidade">
+    <div class="modal__backdrop" data-close="1" aria-hidden="true"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <h2 class="modal__title" id="modal-title">preferencias</h2>
+          <button class="modal__close" type="button" id="modal-close" aria-label="fechar">✕</button>
+        </div>
+
+        <div class="tog" role="group" aria-label="categorias">
+          <div class="tog__row">
+            <div>
+              <strong>essencial</strong>
+              <p>necessario pra lembrar seu consentimento. nao pode ser desligado.</p>
+            </div>
+            <div class="switch" aria-hidden="true"><input type="checkbox" checked disabled></div>
+          </div>
+
+          <div class="tog__row">
+            <div>
+              <strong>analytics</strong>
+              <p>mede acessos pra melhorar conteudo. so roda se voce permitir.</p>
+            </div>
+            <label class="switch">
+              <span class="skip">alternar analytics</span>
+              <input id="tog-analytics" type="checkbox">
+            </label>
+          </div>
+        </div>
+
+        <div class="modal__foot">
+          <button class="cbtn" id="prefs-salvar" type="button">salvar</button>
+          <button class="cbtn cbtn--primary" id="prefs-aceitar" type="button">aceitar tudo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/consent.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
