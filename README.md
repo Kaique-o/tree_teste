@@ -1,6 +1,6 @@
-# ka linktree (static)
+#  Paginas de links (static)
 
-pagina simples estilo linktree, seguindo a identidade dark/glass do teu layout.
+pagina simples, seguindo a identidade dark/glass.
 
 ## 1) trocar os links
 abre `index.html` e troca os `href="https://example.com/..."` pelos teus links reais:
