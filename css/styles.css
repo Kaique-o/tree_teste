@@ -623,8 +623,16 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 /* social no rodape */
 .footer__social{
   display:flex;
-  flex-direction:column;
+  /* Sempre em coluna: LinkedIn acima do YouTube */
+  flex-direction:column !important;
   gap: 8px;
+  align-items:flex-end;
+}
+
+@media (max-width: 520px){
+  /* Em telas menores, centraliza o rodapé e mantém a coluna de botões */
+  .footer{ flex-direction:column; align-items:center; }
+  .footer__social{ align-items:center; }
 }
 .socialbtn{
   display:inline-flex;
