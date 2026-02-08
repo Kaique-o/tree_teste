@@ -7,6 +7,19 @@
   const COOKIE_NAME = "ka_consent";
   const COOKIE_DAYS = 180;
 
+  
+  // ---------- resolve paths (github pages friendly) ----------
+  // pega a pasta do proprio consent.js e resolve a base do site automaticamente
+  const __script = document.currentScript && document.currentScript.src ? new URL(document.currentScript.src) : new URL(location.href);
+  const JS_BASE = new URL(".", __script); // .../js/
+  const COOKIE_PATH = (() => {
+    try {
+      const p = JS_BASE.pathname.replace(/js\/$/,""); // .../ (repo root)
+      return p && p.startsWith("/") ? p : "/";
+    } catch (_) {
+      return "/";
+    }
+  })();
   const $ = (id) => document.getElementById(id);
 
   const banner = $("cookie");
@@ -28,7 +41,7 @@
     const maxAge = days * 24 * 60 * 60;
     // samesite=lax + secure (quando estiver em https)
     const secure = location.protocol === "https:" ? "; Secure" : "";
-    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax${secure}`;
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=${COOKIE_PATH}; SameSite=Lax${secure}`;
   }
 
   function getCookie(name) {
@@ -66,7 +79,7 @@
     analyticsLoaded = true;
 
     const s = document.createElement("script");
-    s.src = "/js/analytics_stub.js";
+    s.src = new URL("./analytics_stub.js", JS_BASE).toString();
     s.defer = true;
     document.head.appendChild(s);
   }
