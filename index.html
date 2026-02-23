@@ -81,7 +81,7 @@
             <path d="M12 2l8.6 4.9v10.2L12 22l-8.6-4.9V6.9L12 2zm0 2.2L5.4 7.6v8.8L12 19.8l6.6-3.4V7.6L12 4.2z"></path>
           </svg>
         </span>
-        <span>Kaique Oli</span>
+        <span class="typing-container"><span class="typing-text" id="logo-text">Kaique Oli</span></span>
       </a>
       <!-- Alternador de Tema e Compartilhamento -->
       <div class="header__right">
@@ -93,9 +93,24 @@
               fill="currentColor"></path>
           </svg>
         </button>
-        <button aria-label="alternar tema" class="pill" id="theme-toggle" type="button">
-          <span aria-hidden="true" class="pill__dot"></span>
-          <span id="theme-label">modo claro</span>
+        <button aria-label="alternar tema" class="pill pill--theme" id="theme-toggle" type="button"
+          title="Alternar tema">
+          <svg class="icon-sun" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+            width="18">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" x2="12" y1="1" y2="3"></line>
+            <line x1="12" x2="12" y1="21" y2="23"></line>
+            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+            <line x1="1" x2="3" y1="12" y2="12"></line>
+            <line x1="21" x2="23" y1="12" y2="12"></line>
+            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+            width="18">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -104,148 +119,176 @@
   <main class="main" id="conteudo">
     <!-- Seção Hero: Introdução -->
     <section aria-label="cabecalho" class="hero">
-      <div class="hero__top">
-        <div>
-          <p class="kicker">Olá! Eu sou o Kaique Oli</p>
-          <h1 class="title">links <span>oficiais</span></h1>
+      <div class="hero__profile">
+        <img alt="Foto de Perfil de Kaique Oli" class="hero__img" src="assets/perfil.webp" />
+        <span class="hero__status">disponível</span>
+      </div>
+      <h1 class="hero__title">Hello world!</h1>
+      <p class="hero__bio">Crio experiências digitais focadas em simplicidade e performance.</p>
+    </section>
+
+    <!-- Card Central de Links -->
+    <div aria-label="links" class="card" role="region">
+      <div class="card__inner">
+        <p class="card__hint">o que você encontra aqui</p>
+        <p class="card__desc">Um hub rápido com os links que você procura — conteúdo, projetos e redes. Sem enrolação.
+        </p>
+
+        <div class="links">
+          <!-- Site Oficial -->
+          <a aria-label="site oficial (abre em nova guia)" class="btn btn--primary" href="https://kaiqueoli.com/"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 20a6 6 0 0 0-12 0"></path>
+                  <circle cx="12" cy="10" r="4"></circle>
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>site oficial</strong>
+                <small>sobre mim e projetos</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- Blog -->
+          <a aria-label="blog (abre em nova guia)" class="btn" href="https://blog.kaiqueoli.com/"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24">
+                  <path d="M5 4h14a2 2 0 0 1 2 2v15l-4-2-4 2-4-2-4 2V6a2 2 0 0 1 2-2zm2 5h10v2H7V9zm0 4h10v2H7v-2z">
+                  </path>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>blog</strong>
+                <small>artigos, notas e bastidores</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a aria-label="linkedin (abre em nova guia)" class="btn"
+            href="https://www.linkedin.com/in/kaique-oliveira-24b710269/" rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>linkedin</strong>
+                <small>carreira e networking</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a aria-label="youtube (abre em nova guia)" class="btn" href="https://www.youtube.com/@kaique-olive"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                  </path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>youtube</strong>
+                <small>vídeos e tutoriais</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a aria-label="github (abre em nova guia)" class="btn" href="https://github.com/Kaique-o"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>github</strong>
+                <small>código, repos e templates</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a aria-label="instagram (abre em nova guia)" class="btn" href="https://www.instagram.com/kaique__o"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>instagram</strong>
+                <small>bastidores e novidades</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
+
+          <!-- Bluesky -->
+          <a aria-label="bluesky (abre em nova guia)" class="btn" href="https://bsky.app/profile/kaique-o.bsky.social"
+            rel="noopener noreferrer" target="_blank">
+            <div class="btn__left">
+              <span aria-hidden="true" class="btn__icon">
+                <svg viewbox="0 0 24 24">
+                  <path
+                    d="M12 12.5c1.6-2.1 3.9-5 6.8-6.8 2.3-1.4 3.2-.8 3.2 1.3 0 2.8-1.5 6.7-4.8 7.4 3.4.6 5.4 3.3 4.2 6.5-1.2 3.1-4.5 1.7-6.7-.1-2.2-1.8-3.6-4.1-2.7-3.2.9.9 1.6 1.5 2.6 1.9-1.2-.7-2.2-1.8-2.8-3.1-.6 1.3-1.6 2.4-2.8 3.1 1-.4 1.7-1 2.6-1.9.9-.9-.5 1.4-2.7 3.2-2.2 1.8-5.5 3.2-6.7.1-1.2-3.2.8-5.9 4.2-6.5-3.3-.7-4.8-4.6-4.8-7.4 0-2.1.9-2.7 3.2-1.3 2.9 1.8 5.2 4.7 6.8 6.8z">
+                  </path>
+                </svg>
+              </span>
+              <span class="btn__label">
+                <strong>bluesky</strong>
+                <small>atualizações rápidas</small>
+              </span>
+            </div>
+            <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
+              <path d="M9 18l6-6-6-6"></path>
+            </svg>
+          </a>
         </div>
       </div>
-
-      <!-- Card Central de Links -->
-      <div aria-label="links" class="card" role="region">
-        <div class="card__inner">
-          <p class="card__hint">o que você encontra aqui</p>
-          <p class="card__desc">Um hub rápido com os links que você procura — conteúdo, projetos e redes. Sem enrolação.
-          </p>
-
-          <div class="links">
-            <!-- Site Oficial -->
-            <a aria-label="site oficial (abre em nova guia)" class="btn btn--primary" href="https://kaiqueoli.com/"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path
-                      d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12zm0 2c-4.2 0-7.7 2.3-8 5.2a1 1 0 0 0 1 1.1h14a1 1 0 0 0 1-1.1c-.3-2.9-3.8-5.2-8-5.2z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>site oficial</strong>
-                  <small>sobre mim e projetos</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-
-            <!-- Blog -->
-            <a aria-label="blog (abre em nova guia)" class="btn" href="https://blog.kaiqueoli.com/"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path d="M5 4h14a2 2 0 0 1 2 2v15l-4-2-4 2-4-2-4 2V6a2 2 0 0 1 2-2zm2 5h10v2H7V9zm0 4h10v2H7v-2z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>blog</strong>
-                  <small>artigos, notas e bastidores</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-
-            <!-- YouTube -->
-            <a aria-label="youtube (abre em nova guia)" class="btn" href="https://www.youtube.com/@kaique-olive"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path
-                      d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>youtube</strong>
-                  <small>vídeos e tutoriais</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-
-            <!-- GitHub -->
-            <a aria-label="github (abre em nova guia)" class="btn" href="https://github.com/Kaique-o"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path
-                      d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6.8 1.9 1.3.4.8 1.1.6 1.8.5.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>github</strong>
-                  <small>código, repos e templates</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a aria-label="instagram (abre em nova guia)" class="btn" href="https://www.instagram.com/kaique__o"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path
-                      d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 10.5zM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>instagram</strong>
-                  <small>bastidores e novidades</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-
-            <!-- Bluesky -->
-            <a aria-label="bluesky (abre em nova guia)" class="btn" href="https://bsky.app/profile/kaique-o.bsky.social"
-              rel="noopener noreferrer" target="_blank">
-              <div class="btn__left">
-                <span aria-hidden="true" class="btn__icon">
-                  <svg viewbox="0 0 24 24">
-                    <path
-                      d="M12 12.5c1.6-2.1 3.9-5 6.8-6.8 2.3-1.4 3.2-.8 3.2 1.3 0 2.8-1.5 6.7-4.8 7.4 3.4.6 5.4 3.3 4.2 6.5-1.2 3.1-4.5 1.7-6.7-.1-2.2-1.8-3.6-4.1-2.7-3.2.9.9 1.6 1.5 2.6 1.9-1.2-.7-2.2-1.8-2.8-3.1-.6 1.3-1.6 2.4-2.8 3.1 1-.4 1.7-1 2.6-1.9.9-.9-.5 1.4-2.7 3.2-2.2 1.8-5.5 3.2-6.7.1-1.2-3.2.8-5.9 4.2-6.5-3.3-.7-4.8-4.6-4.8-7.4 0-2.1.9-2.7 3.2-1.3 2.9 1.8 5.2 4.7 6.8 6.8z">
-                    </path>
-                  </svg>
-                </span>
-                <span class="btn__label">
-                  <strong>bluesky</strong>
-                  <small>atualizações rápidas</small>
-                </span>
-              </div>
-              <svg aria-hidden="true" class="btn__chev" viewbox="0 0 24 24">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
 
     <!-- Dados Estruturados (JSON-LD) para SEO (Pessoa) -->
@@ -266,7 +309,8 @@
 
   <!-- Rodapé -->
   <footer class="footer">
-    <span>© <span id="ano"></span> Kaique Oli</span>
+    <span>© <span id="ano"></span> Kaique Oli · <a href="privacy/">Privacidade</a> · <a
+        href="cookies/">Cookies</a></span>
   </footer>
 
   <!-- Banner de Cookies (Inicia oculto) -->

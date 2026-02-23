@@ -255,6 +255,51 @@ input:focus-visible {
   box-shadow: 0 0 0 4px var(--color-focus);
 }
 
+/* --- LOGO TYPING ANIMATION --- */
+.typing-container {
+  display: inline-flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.typing-text {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* A classe 'animate-typing' será adicionada via JS */
+.animate-typing {
+  animation: typing 2.5s steps(10, end) forwards, blink-caret 0.75s step-end infinite;
+  border-right: 2px solid var(--color-accent);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--color-accent);
+  }
+}
+
+/* Esconde o cursor após a animação (adicionado via JS se necessário) */
+.typing-done {
+  border-right-color: transparent !important;
+}
+
 /* --- HEADER (Nav) --- */
 .header {
   position: sticky;
@@ -340,19 +385,36 @@ input:focus-visible {
   box-shadow: 0 0 0 3px var(--color-focus);
 }
 
-/* Botão de Compartilhar */
-.pill--share {
+/* Botões Específicos (Compartilhar e Tema) */
+.pill--share,
+.pill--theme {
   padding: 8px;
   width: 36px;
   height: 36px;
   justify-content: center;
 }
 
-.pill--share svg {
+.pill--theme .icon-sun,
+.pill--theme .icon-moon {
+  display: none;
+}
+
+/* Mostra o Sol no escuro (para mudar pro claro) e Lua no claro (para mudar pro escuro) */
+html[data-theme="dark"] .pill--theme .icon-sun {
+  display: block;
+}
+
+html[data-theme="light"] .pill--theme .icon-moon {
+  display: block;
+}
+
+.pill--share svg,
+.pill--theme svg {
   transition: transform 0.2s ease;
 }
 
-.pill--share:active svg {
+.pill--share:active svg,
+.pill--theme:active svg {
   transform: scale(0.9);
 }
 

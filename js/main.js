@@ -67,13 +67,7 @@
     // Aplica o atributo data-theme ao <html> (CSS consome este atributo)
     root.dataset.theme = t;
 
-    // Atualiza o texto do botão de alternância (mostra qual será a próxima ação)
-    const label = $("theme-label");
-    if (label) {
-      label.textContent = (t === "light") ? "modo escuro" : "modo claro";
-    }
-
-    // Atualiza o theme-color para navegadores mobile (barra de status)
+    // 2. Metatags e Identidade Visual (barra de status mobile)
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
       metaTheme.setAttribute("content", (t === "light") ? "#fdfaff" : "#070808");
@@ -90,9 +84,30 @@
   }
 
   // --- INICIALIZAÇÃO DO TEMA ---
-  // Prioridade: Salvo no Disk > Preferência do SO > Padrão (Escuro)
+  // Prioridade: Salvo em disco > Preferência do Sistema > Padrão (Escuro)
   const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
   setTheme(initialTheme, false);
+
+  // --- ANIMAÇÃO DO LOGO (Uma vez por sessão) ---
+  const LOGO_ANIM_KEY = "ka_logo_anim";
+  const logoText = $("logo-text");
+
+  if (logoText) {
+    const hasAnimated = sessionStorage.getItem(LOGO_ANIM_KEY);
+
+    if (!hasAnimated) {
+      // Ativa a animação de digitação
+      logoText.classList.add("animate-typing");
+
+      // Salva que já animou nesta sessão
+      sessionStorage.setItem(LOGO_ANIM_KEY, "true");
+
+      // Remove o cursor após a animação (2.5s de animação + buffer)
+      setTimeout(() => {
+        logoText.classList.add("typing-done");
+      }, 3000);
+    }
+  }
 
   // Listener para o botão de toggle
   const toggleBtn = $("theme-toggle");
