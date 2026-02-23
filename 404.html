@@ -62,8 +62,22 @@
       </a>
       <div class="header__right">
         <button aria-label="alternar tema" class="pill" id="theme-toggle" type="button">
-          <span aria-hidden="true" class="pill__dot"></span>
-          <span id="theme-label">modo claro</span>
+          <svg aria-hidden="true" class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" x2="12" y1="1" y2="3"></line>
+            <line x1="12" x2="12" y1="21" y2="23"></line>
+            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+            <line x1="1" x2="3" y1="12" y2="12"></line>
+            <line x1="21" x2="23" y1="12" y2="12"></line>
+            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+          </svg>
+          <svg aria-hidden="true" class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -100,8 +114,13 @@
   </main>
 
   <footer class="footer">
-    <span>© <span id="ano"></span> Kaique Oli · <a href="./privacy/">Privacidade</a> · <a
-        href="./cookies/">Cookies</a></span>
+    <div class="footer__inner">
+      <span class="footer__copy">© <span id="ano"></span> Kaique Oli</span>
+      <nav class="footer__nav">
+        <a href="./privacy/">Privacidade</a>
+        <a href="./cookies/">Cookies</a>
+      </nav>
+    </div>
   </footer>
   <section aria-label="banner de cookies" class="cookie" hidden="" id="cookie">
     <div class="cookie__inner">

@@ -269,8 +269,9 @@ input:focus-visible {
 
 /* A classe 'animate-typing' será adicionada via JS */
 .animate-typing {
-  animation: typing 2.5s steps(10, end) forwards, blink-caret 0.75s step-end infinite;
   border-right: 2px solid var(--color-accent);
+  animation: blink-caret 0.75s step-end infinite;
+  padding-right: 2px;
 }
 
 @keyframes typing {

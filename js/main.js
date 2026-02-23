@@ -93,19 +93,33 @@
   const logoText = $("logo-text");
 
   if (logoText) {
+    const fullText = logoText.textContent;
     const hasAnimated = sessionStorage.getItem(LOGO_ANIM_KEY);
 
     if (!hasAnimated) {
-      // Ativa a animação de digitação
-      logoText.classList.add("animate-typing");
+      // Limpa para começar a digitar letra por letra
+      logoText.textContent = "";
+      logoText.classList.add("animate-typing"); // Apenas para o cursor
 
-      // Salva que já animou nesta sessão
-      sessionStorage.setItem(LOGO_ANIM_KEY, "true");
+      let charIdx = 0;
+      const typeChar = () => {
+        if (charIdx < fullText.length) {
+          logoText.textContent += fullText.charAt(charIdx);
+          charIdx++;
+          // Velocidade variável para parecer mais natural
+          const delay = charIdx === 6 ? 400 : 100 + Math.random() * 50;
+          setTimeout(typeChar, delay);
+        } else {
+          // Finalizou a digitação
+          sessionStorage.setItem(LOGO_ANIM_KEY, "true");
+          setTimeout(() => {
+            logoText.classList.add("typing-done");
+          }, 1500);
+        }
+      };
 
-      // Remove o cursor após a animação (2.5s de animação + buffer)
-      setTimeout(() => {
-        logoText.classList.add("typing-done");
-      }, 3000);
+      // Pequeno delay antes de começar
+      setTimeout(typeChar, 500);
     }
   }
 

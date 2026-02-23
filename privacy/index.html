@@ -64,8 +64,22 @@
       </a>
       <div class="header__right">
         <button aria-label="alternar tema" class="pill" id="theme-toggle" type="button">
-          <span aria-hidden="true" class="pill__dot"></span>
-          <span id="theme-label">modo claro</span>
+          <svg aria-hidden="true" class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" x2="12" y1="1" y2="3"></line>
+            <line x1="12" x2="12" y1="21" y2="23"></line>
+            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+            <line x1="1" x2="3" y1="12" y2="12"></line>
+            <line x1="21" x2="23" y1="12" y2="12"></line>
+            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+          </svg>
+          <svg aria-hidden="true" class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -75,30 +89,42 @@
       <div class="card__inner">
         <p class="kicker">Última atualização: <span id="data-atualizacao"></span></p>
         <h1>Política de Privacidade</h1>
-        <p>Esta é uma página leve de links. A ideia é coletar o mínimo possível — só o necessário para funcionar bem.
-        </p>
-        <h2 class="card__hint">O que é coletado</h2>
+        <p>Sua privacidade é uma prioridade. Esta política detalha como lidamos com as informações coletadas durante sua
+          visita.</p>
+
+        <h2 class="card__hint">Coleta de Dados</h2>
+        <p>Operamos sob o princípio da minimização de dados. Coletamos apenas o estritamente necessário para o
+          funcionamento técnico do site e para respeitar suas escolhas de privacidade.</p>
+
+        <h2 class="card__hint">Uso de Informações</h2>
         <ul>
-          <li><strong>Consentimento</strong>: guardo sua escolha de cookies (essencial) para não perguntar sempre.</li>
-          <li><strong>Analytics (opcional)</strong>: só carrega se você aceitar. Por padrão, fica desligado.</li>
+          <li><strong>Preferências de Navegação</strong>: Armazenamos sua escolha de tema (claro/escuro) e suas opções
+            de consentimento de cookies localmente no seu dispositivo.</li>
+          <li><strong>Estatísticas de Acesso</strong>: Caso você autorize, dados anônimos de navegação podem ser
+            coletados para fins estatísticos através de ferramentas de terceiros (como o Google Analytics).</li>
         </ul>
-        <h2 class="card__hint">Links para terceiros</h2>
-        <p>Ao clicar nos links (YouTube, GitHub, Instagram, Bluesky, Blog), você sai deste site e passa a seguir as
-          políticas de privacidade dessas plataformas.</p>
-        <h2 class="card__hint">Como você pode gerenciar seus dados</h2>
-        <p>Como a preferência é salva no seu navegador, você pode remover a qualquer momento limpando
-          cookies/localStorage. Se você integrar um analytics real no futuro, atualize esta página com os detalhes do
-          que será coletado.</p>
-        <p>
-          <a href="../cookies/">ver política de cookies</a>
-        </p>
-        <p><a href="../">Voltar para os links</a> · <a href="../cookies/">Ver Política de Cookies</a></p>
+
+        <h2 class="card__hint">Segurança e Links Externos</h2>
+        <p>Este site contém links para redes sociais e outras plataformas externas. Ao clicar nestes links, você estará
+          sujeito às políticas de privacidade de cada respectivo serviço.</p>
+
+        <h2 class="card__hint">Seus Direitos</h2>
+        <p>Você tem total controle sobre seus dados. Como não coletamos informações de identificação pessoal
+          diretamente, você pode gerenciar suas preferências através das configurações do site ou limpando os dados do
+          navegador.</p>
+
+        <p><a href="../">Voltar para a página inicial</a> · <a href="../cookies/">Ver Política de Cookies</a></p>
       </div>
     </div>
   </main>
   <footer class="footer">
-    <span>© <span id="ano"></span> Kaique Oli · <a href="../privacy/">Privacidade</a> · <a
-        href="../cookies/">Cookies</a></span>
+    <div class="footer__inner">
+      <span class="footer__copy">© <span id="ano"></span> Kaique Oli</span>
+      <nav class="footer__nav">
+        <a href="../privacy/">Privacidade</a>
+        <a href="../cookies/">Cookies</a>
+      </nav>
+    </div>
   </footer>
   <!-- cookie banner + modal (reutiliza a mesma estrutura do index) -->
   <section aria-label="banner de cookies" class="cookie" hidden="" id="cookie">

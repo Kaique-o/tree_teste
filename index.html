@@ -119,12 +119,12 @@
   <main class="main" id="conteudo">
     <!-- Seção Hero: Introdução -->
     <section aria-label="cabecalho" class="hero">
-      <div class="hero__profile">
-        <img alt="Foto de Perfil de Kaique Oli" class="hero__img" src="assets/perfil.webp" />
-        <span class="hero__status">disponível</span>
+      <div class="hero__top">
+        <div>
+          <p class="kicker">Olá! Eu sou o Kaique Oli</p>
+          <h1 class="title">links <span>oficiais</span></h1>
+        </div>
       </div>
-      <h1 class="hero__title">Hello world!</h1>
-      <p class="hero__bio">Crio experiências digitais focadas em simplicidade e performance.</p>
     </section>
 
     <!-- Card Central de Links -->
@@ -309,8 +309,13 @@
 
   <!-- Rodapé -->
   <footer class="footer">
-    <span>© <span id="ano"></span> Kaique Oli · <a href="privacy/">Privacidade</a> · <a
-        href="cookies/">Cookies</a></span>
+    <div class="footer__inner">
+      <span class="footer__copy">© <span id="ano"></span> Kaique Oli</span>
+      <nav class="footer__nav">
+        <a href="privacy/">Privacidade</a>
+        <a href="cookies/">Cookies</a>
+      </nav>
+    </div>
   </footer>
 
   <!-- Banner de Cookies (Inicia oculto) -->

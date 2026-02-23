@@ -64,8 +64,22 @@
       </a>
       <div class="header__right">
         <button aria-label="alternar tema" class="pill" id="theme-toggle" type="button">
-          <span aria-hidden="true" class="pill__dot"></span>
-          <span id="theme-label">modo claro</span>
+          <svg aria-hidden="true" class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" x2="12" y1="1" y2="3"></line>
+            <line x1="12" x2="12" y1="21" y2="23"></line>
+            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+            <line x1="1" x2="3" y1="12" y2="12"></line>
+            <line x1="21" x2="23" y1="12" y2="12"></line>
+            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+          </svg>
+          <svg aria-hidden="true" class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -75,27 +89,40 @@
       <div class="card__inner">
         <p class="kicker">Última atualização: <span id="data-atualizacao"></span></p>
         <h1>Política de Cookies</h1>
-        <p>Esta página explica, de forma simples e direta, como os cookies são usados aqui.</p>
-        <h2 class="card__hint">O que existe aqui</h2>
+        <p>Esta página descreve como utilizamos cookies e tecnologias semelhantes para garantir o funcionamento do site
+          e entender como você interage com nosso conteúdo.</p>
+
+        <h2 class="card__hint">O que são cookies?</h2>
+        <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo que nos permitem lembrar suas
+          preferências e otimizar sua experiência de navegação.</p>
+
+        <h2 class="card__hint">Categorias de cookies utilizados</h2>
         <ul>
-          <li><strong>Consentimento (essencial)</strong>: salva sua escolha no navegador para não mostrar o banner toda
-            hora.</li>
-          <li><strong>Analytics (opcional)</strong>: só carrega se você permitir. O projeto vem com um arquivo “stub”
-            para você plugar GA4, Plausible, etc.</li>
+          <li><strong>Essenciais (Sempre Ativos)</strong>: São necessários para o funcionamento básico do site, como o
+            armazenamento das suas preferências de privacidade. Sem eles, o site não funcionaria corretamente.</li>
+          <li><strong>Analytics (Opcional)</strong>: Utilizamos ferramentas para coletar dados anônimos sobre o uso do
+            site (ex: páginas mais visitadas). Esses dados nos ajudam a melhorar a performance e o conteúdo. Eles só são
+            carregados se você conceder permissão.</li>
         </ul>
-        <h2 class="card__hint">Como sua escolha é salva</h2>
-        <p>A preferência é guardada via localStorage e também em um cookie chamado ka_consent (prazo de 180 dias). Mesmo
-          se você rejeitar analytics, a sua escolha fica registrada.</p>
-        <h2 class="card__hint">Como mudar depois</h2>
-        <p>Você pode mudar a qualquer momento em <a href="#" id="abrir-preferencias-inline">Preferências</a> ou limpando
-          cookies/localStorage do navegador.</p>
-        <p><a href="../">Voltar para os links</a></p>
+
+        <h2 class="card__hint">Gerenciamento de Preferências</h2>
+        <p>Suas escolhas são armazenadas de forma segura no seu navegador. Você pode revisar ou alterar seu
+          consentimento a qualquer momento através do link abaixo ou limpando os dados de navegação (cache/cookies) do
+          seu browser.</p>
+
+        <p><a href="#" id="abrir-preferencias-inline" class="footer__link">Gerenciar Preferências de Cookies</a></p>
+        <p><a href="../">Voltar para a página inicial</a></p>
       </div>
     </div>
   </main>
   <footer class="footer">
-    <span>© <span id="ano"></span> Kaique Oli · <a href="../privacy/">Privacidade</a> · <a
-        href="../cookies/">Cookies</a></span>
+    <div class="footer__inner">
+      <span class="footer__copy">© <span id="ano"></span> Kaique Oli</span>
+      <nav class="footer__nav">
+        <a href="../privacy/">Privacidade</a>
+        <a href="../cookies/">Cookies</a>
+      </nav>
+    </div>
   </footer>
   <section aria-label="banner de cookies" class="cookie" hidden="" id="cookie">
     <div class="cookie__inner">
