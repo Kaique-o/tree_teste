@@ -1,44 +1,54 @@
-#  Paginas de links (static)
+# 💎 Kaique Oli — Link Tree Profile
 
-pagina simples, seguindo a identidade dark/glass.
+Uma página de links pessoal elegante, moderna e focada em performance. Desenvolvida sob o conceito de **Silent Luxury**, priorizando minimalismo, sofisticação tipográfica e micro-interações fluidas.
 
-## 1) trocar os links
-abre `index.html` e troca os `href="https://example.com/..."` pelos teus links reais:
+![Visual Preview](assets/og.png)
 
-- sobre mim (home do teu site)
-- blog
-- youtube
-- github
-- instagram
-- bluesky
+## ✨ Principais Funcionalidades
 
-tambem atualiza:
-- `<link rel="canonical" ...>`
-- `og:url` e `sitemap.xml` (tudo que esta como `https://example.com`)
+- **🌓 Modo Escuro Automático**: Sincronização inteligente com as preferências do sistema operacional (`prefers-color-scheme`), com suporte a troca manual persistente.
+- **⌨️ Animação de Digitação**: Efeito typewriter no logo do cabeçalho, acionado uma única vez por sessão para uma recepção premium.
+- **🛡️ Privacidade em Primeiro Lugar**: Banner de consentimento de cookies e modal de preferências integrados. Sem cookies de terceiros por padrão.
+- **📱 Responsividade Total**: Experiência otimizada para dispositivos móveis, tablets e desktops.
+- **🚀 Ultra Performance**: Site 100% estático com carregamento instantâneo e pontuação máxima no Lighthouse.
+- **💎 Design Glassmorphism**: Interface moderna baseada em camadas, transparências sutis e animações de fundo.
 
-## 2) cookies / lgpd
-- banner de consentimento + modal de preferencias
-- por padrao `analytics` fica **desligado**
-- se o usuario aceitar, carrega `/js/analytics_stub.js`
+## 🛠️ Tecnologias Utilizadas
 
-pra plugar uma ferramenta real:
-- troca o conteudo de `js/analytics_stub.js` pelo snippet do teu analytics
-- **nao** carrega nada antes de consentimento
+- **HTML5**: Estrutura semântica para acessibilidade e SEO.
+- **CSS3 (Moderno)**: Variáveis nativas (Tokens), Grid, Flexbox e animações `@keyframes`.
+- **Vanilla JavaScript**: Lógica de tema, animações e consentimento sem dependências externas.
+- **SVG**: Iconografia Premium (`Lucide inspired`) baseada em traços para nitidez máxima.
 
-## 3) preview local
-na raiz do projeto:
+## 🚀 Como Executar Localmente
+
+Você pode abrir o `index.html` diretamente no navegador ou usar um servidor local simples:
 
 ```bash
-python -m http.server 8080
+# Se tiver Python instalado
+python -m http.server 8000
+```
+Acesse em: `http://localhost:8000`
+
+## 📦 Estrutura de Arquivos
+
+```text
+├── assets/          # Logo, Favicons e OpenGraph Images
+├── css/             # Estilos BEM e Design System
+├── js/              # main.js (UI) e consent.js (Privacidade)
+├── cookies/         # Política de Cookies detalhada
+├── privacy/         # Política de Privacidade profissional
+├── index.html       # Página Principal (Link Tree)
+└── sitemap.xml      # Otimização para motores de busca
 ```
 
-abre no navegador: `http://localhost:8080`
+## 🌐 Deploy
 
-## 4) deploy
-isso aqui eh 100% estatico. sobe em qualquer host:
-- vercel static
-- netlify
-- cloudflare pages
-- github pages
+Por ser um projeto puramente estático, pode ser hospedado gratuitamente em:
+- [Vercel](https://vercel.com)
+- [Netlify](https://netlify.com)
+- [GitHub Pages](https://pages.github.com)
+- [Cloudflare Pages](https://pages.cloudflare.com)
 
-dica: se o host permitir, seta headers de seguranca (CSP, HSTS, etc.) no servidor.
+---
+Criado com foco em excelência e minimalismo.
