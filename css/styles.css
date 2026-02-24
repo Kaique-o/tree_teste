@@ -6,31 +6,38 @@
 */
 
 :root {
-  /* --- Cores Base (Tema Escuro por padrão) --- */
-  --color-bg-primary: #070808;
-  /* Fundo principal profundo */
-  --color-bg-secondary: #070808;
-  /* Fundo secundário para gradientes */
-  --color-text-main: #fdfaff;
-  /* Texto principal (alto contraste) */
-  --color-text-muted: #9aa6b2;
-  /* Texto suave/secundário */
-  --color-text-strong: rgba(253, 250, 255, 0.78);
-  --color-text-soft: rgba(253, 250, 255, 0.60);
+  /* --- Fontes do Manual --- */
+  --font-title: "Times New Roman", Times, serif;
+  --font-body: Helvetica, Arial, sans-serif;
 
-  /* --- Superfícies e Bordas (Efeito Glassmorphism) --- */
-  --surface-glass: rgba(253, 250, 255, 0.06);
-  --surface-glass-bright: rgba(253, 250, 255, 0.04);
-  --border-glass: rgba(253, 250, 255, 0.12);
-  --border-glass-strong: rgba(253, 250, 255, 0.18);
-  --shadow-main: 0 10px 40px rgba(7, 8, 8, 0.55);
+  /* --- Cores Base (Tema Escuro) --- */
+  --color-brand-black: #070808;
+  --color-brand-navy: #0d1c39;
+  --color-brand-blue: #1e4185;
+  --color-brand-cyan-gray: #9eb4be;
+  --color-brand-cyan-light: #b4ced9;
+  --color-brand-gray-dark: #32393c;
+  --color-brand-gray-light: #5d6a70;
+  --color-brand-white: #fdfaff;
 
-  /* --- Acentos e Interação --- */
-  --color-accent: #2f7dff;
-  /* Azul vibrante principal */
-  --color-accent-light: #4bc7ff;
-  /* Azul claro de destaque */
-  --color-focus: rgba(47, 125, 255, 0.65);
+  --color-bg-primary: var(--color-brand-black);
+  --color-bg-secondary: var(--color-brand-navy);
+  --color-text-main: var(--color-brand-white);
+  --color-text-muted: var(--color-brand-cyan-gray);
+  --color-text-strong: rgba(253, 250, 255, 0.85);
+  --color-text-soft: var(--color-brand-cyan-light);
+
+  /* --- Superfícies e Bordas (Ajustadas para Manual) --- */
+  --surface-glass: rgba(158, 180, 190, 0.08);
+  --surface-glass-bright: rgba(158, 180, 190, 0.12);
+  --border-glass: rgba(93, 106, 112, 0.25);
+  --border-glass-strong: rgba(93, 106, 112, 0.4);
+  --shadow-main: 0 10px 40px rgba(7, 8, 8, 0.65);
+
+  /* --- Acentos --- */
+  --color-accent: var(--color-brand-blue);
+  --color-accent-light: var(--color-brand-cyan-light);
+  --color-focus: rgba(30, 65, 133, 0.65);
   --radius-medium: 18px;
   --radius-large: 22px;
 
@@ -39,27 +46,26 @@
   --padding-base: clamp(18px, 2.2vw, 28px);
 
   /* --- Ícones e Rodapé --- */
-  --color-icon: rgba(253, 250, 255, 0.92);
-  --color-icon-muted: rgba(253, 250, 255, 0.6);
-  --color-footer-muted: rgba(253, 250, 255, 0.55);
-  --color-footer-link: rgba(253, 250, 255, 0.70);
-  --footer-underline: rgba(253, 250, 255, 0.24);
+  --color-icon: var(--color-brand-white);
+  --color-icon-muted: var(--color-brand-cyan-gray);
+  --color-footer-muted: var(--color-brand-cyan-gray);
+  --color-footer-link: var(--color-brand-cyan-light);
+  --footer-underline: rgba(180, 206, 217, 0.3);
 
   /* --- Background Animado (Glows) --- */
-  --glow-1: rgba(47, 125, 255, 0.55);
-  --glow-2: rgba(75, 199, 255, 0.45);
-  --glow-3: rgba(47, 125, 255, 0.35);
+  --glow-1: rgba(30, 65, 133, 0.45);
+  --glow-2: rgba(13, 28, 57, 0.6);
+  --glow-3: rgba(30, 65, 133, 0.35);
 
-  /* --- Configurações do Grid de Fundo --- */
-  --grid-line-x: rgba(253, 250, 255, 0.04);
-  --grid-line-y: rgba(253, 250, 255, 0.03);
-  --grid-opacity: 0.22;
+  /* --- Grid --- */
+  --grid-line-x: rgba(158, 180, 190, 0.06);
+  --grid-line-y: rgba(158, 180, 190, 0.04);
+  --grid-opacity: 0.25;
   --grid-blend: overlay;
 
-  /* --- Elementos Flutuantes --- */
-  --header-bg: rgba(7, 8, 8, 0.52);
-  --cookie-bg: rgba(7, 8, 8, 0.72);
-  --modal-bg: rgba(7, 8, 8, 0.86);
+  --header-bg: rgba(7, 8, 8, 0.75);
+  --cookie-bg: rgba(13, 28, 57, 0.9);
+  --modal-bg: rgba(7, 8, 8, 0.95);
 
   color-scheme: dark light;
 }
@@ -69,38 +75,38 @@
    Utiliza a mesma estrutura de variáveis para garantir a cascata correta.
 */
 html[data-theme="light"] {
-  --color-bg-primary: #fdfaff;
-  --color-bg-secondary: #fdfaff;
-  --color-text-main: #070808;
-  --color-text-muted: #5b6774;
-  --color-text-strong: rgba(7, 8, 8, 0.78);
-  --color-text-soft: rgba(7, 8, 8, 0.60);
+  --color-bg-primary: var(--color-brand-white);
+  --color-bg-secondary: #eef2f5;
+  --color-text-main: var(--color-brand-navy);
+  --color-text-muted: var(--color-brand-gray-light);
+  --color-text-strong: var(--color-brand-gray-dark);
+  --color-text-soft: #4a5d7a;
 
-  --surface-glass: rgba(7, 8, 8, 0.05);
-  --surface-glass-bright: rgba(7, 8, 8, 0.03);
-  --border-glass: rgba(7, 8, 8, 0.10);
-  --border-glass-strong: rgba(7, 8, 8, 0.16);
-  --shadow-main: 0 12px 38px rgba(7, 8, 8, 0.14);
-  --color-focus: rgba(47, 125, 255, 0.45);
+  --surface-glass: rgba(13, 28, 57, 0.05);
+  --surface-glass-bright: rgba(13, 28, 57, 0.03);
+  --border-glass: rgba(13, 28, 57, 0.15);
+  --border-glass-strong: rgba(13, 28, 57, 0.25);
+  --shadow-main: 0 12px 38px rgba(13, 28, 57, 0.1);
+  --color-focus: rgba(30, 65, 133, 0.4);
 
-  --color-icon: rgba(7, 8, 8, 0.92);
-  --color-icon-muted: rgba(7, 8, 8, 0.55);
-  --color-footer-muted: rgba(7, 8, 8, 0.55);
-  --color-footer-link: rgba(7, 8, 8, 0.70);
-  --footer-underline: rgba(7, 8, 8, 0.22);
+  --color-icon: var(--color-brand-navy);
+  --color-icon-muted: var(--color-brand-gray-light);
+  --color-footer-muted: var(--color-brand-gray-light);
+  --color-footer-link: var(--color-brand-blue);
+  --footer-underline: rgba(30, 65, 133, 0.2);
 
-  --grid-line-x: rgba(7, 8, 8, 0.07);
-  --grid-line-y: rgba(7, 8, 8, 0.05);
-  --grid-opacity: 0.14;
+  --grid-line-x: rgba(13, 28, 57, 0.05);
+  --grid-line-y: rgba(13, 28, 57, 0.04);
+  --grid-opacity: 0.15;
   --grid-blend: multiply;
 
-  --header-bg: rgba(253, 250, 255, 0.72);
-  --cookie-bg: rgba(253, 250, 255, 0.80);
-  --modal-bg: rgba(253, 250, 255, 0.90);
+  --header-bg: rgba(253, 250, 255, 0.85);
+  --cookie-bg: rgba(253, 250, 255, 0.95);
+  --modal-bg: rgba(253, 250, 255, 0.98);
 
-  --glow-1: rgba(47, 125, 255, 0.22);
-  --glow-2: rgba(75, 199, 255, 0.18);
-  --glow-3: rgba(47, 125, 255, 0.16);
+  --glow-1: rgba(158, 180, 190, 0.3);
+  --glow-2: rgba(180, 206, 217, 0.25);
+  --glow-3: rgba(158, 180, 190, 0.2);
 
   color-scheme: light;
 }
@@ -121,7 +127,7 @@ body {
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-body);
   background: linear-gradient(180deg, var(--color-bg-primary), var(--color-bg-secondary));
   color: var(--color-text-main);
   overflow-x: hidden;
@@ -263,8 +269,9 @@ input:focus-visible {
 }
 
 .typing-text {
+  font-family: var(--font-title);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 /* A classe 'animate-typing' será adicionada via JS */
@@ -341,16 +348,16 @@ input:focus-visible {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(47, 125, 255, 0.9), rgba(75, 199, 255, 0.85));
-  box-shadow: 0 10px 30px rgba(47, 125, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-navy));
+  box-shadow: 0 10px 30px rgba(30, 65, 133, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   flex: 0 0 auto;
 }
 
 .brand__mark svg {
   width: 18px;
   height: 18px;
-  fill: #091027;
+  fill: var(--color-brand-white);
 }
 
 .header__right {
@@ -423,8 +430,8 @@ html[data-theme="light"] .pill--theme .icon-moon {
   width: 8px;
   height: 8px;
   border-radius: 99px;
-  background: rgba(75, 199, 255, 0.9);
-  box-shadow: 0 0 0 6px rgba(75, 199, 255, 0.12);
+  background: var(--color-brand-cyan-light);
+  box-shadow: 0 0 0 6px rgba(180, 206, 217, 0.15);
 }
 
 /* --- CONTEÚDO PRINCIPAL --- */
@@ -456,9 +463,10 @@ html[data-theme="light"] .pill--theme .icon-moon {
 
 .title {
   margin: 6px 0 0;
+  font-family: var(--font-title);
   font-size: clamp(26px, 3.5vw, 40px);
   line-height: 1.06;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .title span {
@@ -551,7 +559,7 @@ html[data-theme="light"] .pill--theme .icon-moon {
 }
 
 .btn--primary:hover {
-  background: rgba(47, 125, 255, 0.12);
+  background: rgba(30, 65, 133, 0.12);
 }
 
 .btn:hover {
@@ -582,10 +590,53 @@ html[data-theme="light"] .pill--theme .icon-moon {
   flex: 0 0 auto;
 }
 
-.btn__icon svg {
+.btn__icon i {
+  display: block;
   width: 18px;
   height: 18px;
-  fill: var(--color-icon);
+  background-color: var(--color-icon);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Classes para cada Ícone */
+.icon-site {
+  mask-image: url('../assets/icons/site.svg');
+  -webkit-mask-image: url('../assets/icons/site.svg');
+}
+
+.icon-blog {
+  mask-image: url('../assets/icons/blog.svg');
+  -webkit-mask-image: url('../assets/icons/blog.svg');
+}
+
+.icon-linkedin {
+  mask-image: url('../assets/icons/linkedin.svg');
+  -webkit-mask-image: url('../assets/icons/linkedin.svg');
+}
+
+.icon-youtube {
+  mask-image: url('../assets/icons/youtube.svg');
+  -webkit-mask-image: url('../assets/icons/youtube.svg');
+}
+
+.icon-github {
+  mask-image: url('../assets/icons/github.svg');
+  -webkit-mask-image: url('../assets/icons/github.svg');
+}
+
+.icon-instagram {
+  mask-image: url('../assets/icons/instagram.svg');
+  -webkit-mask-image: url('../assets/icons/instagram.svg');
+}
+
+.icon-bluesky {
+  mask-image: url('../assets/icons/bluesky.svg');
+  -webkit-mask-image: url('../assets/icons/bluesky.svg');
 }
 
 .btn__label {
@@ -715,13 +766,13 @@ html[data-theme="light"] .pill--theme .icon-moon {
 }
 
 .cbtn--primary {
-  background: linear-gradient(135deg, rgba(47, 125, 255, 0.95), rgba(75, 199, 255, 0.9));
+  background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-navy));
   border-color: rgba(255, 255, 255, 0.18);
-  color: #07101f;
+  color: var(--color-brand-white);
 }
 
 .cbtn--primary:hover {
-  filter: brightness(1.02);
+  filter: brightness(1.15);
 }
 
 /* --- MODAL DE PREFERÊNCIAS (Cookies) --- */
@@ -852,8 +903,8 @@ html[data-theme="light"] .pill--theme .icon-moon {
 }
 
 .switch input:checked {
-  background: rgba(47, 125, 255, 0.35);
-  border-color: rgba(47, 125, 255, 0.55);
+  background: var(--color-brand-blue);
+  border-color: var(--color-brand-cyan-light);
 }
 
 .switch input:checked::after {
