@@ -329,6 +329,7 @@ input:focus-visible {
   gap: 12px;
 }
 
+
 .header__slot {
   min-width: 42px;
 }
@@ -342,23 +343,6 @@ input:focus-visible {
   justify-self: center;
 }
 
-.brand__mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-navy));
-  box-shadow: 0 10px 30px rgba(30, 65, 133, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  flex: 0 0 auto;
-}
-
-.brand__mark svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--color-brand-white);
-}
 
 .header__right {
   display: flex;
@@ -424,14 +408,6 @@ html[data-theme="light"] .pill--theme .icon-moon {
 .pill--share:active svg,
 .pill--theme:active svg {
   transform: scale(0.9);
-}
-
-.pill__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 99px;
-  background: var(--color-brand-cyan-light);
-  box-shadow: 0 0 0 6px rgba(180, 206, 217, 0.15);
 }
 
 /* --- CONTEÚDO PRINCIPAL --- */

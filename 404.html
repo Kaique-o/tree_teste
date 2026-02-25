@@ -17,7 +17,8 @@
   <meta property="og:title" content="Página não encontrada — Kaique Oli">
   <meta property="og:description" content="A página que você tentou acessar não existe ou mudou de endereço.">
   <meta property="og:image" content="assets/og.png">
-  <meta property="og:site_name" content="Kaique Oli">
+  <meta name="author" content="Kaique Oli">
+  <meta property="og:locale" content="pt_BR">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Página não encontrada — Kaique Oli">
@@ -53,12 +54,7 @@
     <div class="header__inner">
       <div aria-hidden="true" class="header__slot"></div>
       <a aria-label="voltar para o início" class="brand" href="./">
-        <span aria-hidden="true" class="brand__mark">
-          <svg aria-hidden="true" viewbox="0 0 24 24">
-            <path d="M12 2l8.6 4.9v10.2L12 22l-8.6-4.9V6.9L12 2zm0 2.2L5.4 7.6v8.8L12 19.8l6.6-3.4V7.6L12 4.2z"></path>
-          </svg>
-        </span>
-        <span>Kaique Oli</span>
+        <span class="typing-container"><span class="typing-text" id="logo-text">Kaique Oli</span></span>
       </a>
       <div class="header__right">
         <button aria-label="alternar tema" class="pill" id="theme-toggle" type="button">
@@ -111,6 +107,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Dados Estruturados (JSON-LD) para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Links Oficiais",
+        "item": "https://kaiqueoli.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Página não encontrada",
+        "item": "https://kaiqueoli.com/404"
+      }]
+    }
+    </script>
   </main>
 
   <footer class="footer">
